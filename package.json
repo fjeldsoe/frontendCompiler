@@ -1,0 +1,37 @@
+{
+  "name": "frontendcompiler",
+  "version": "1.0.0",
+  "description": "Setup to compile all frontend assets",
+  "main": "gulpfile.js",
+
+  "dependencies": {},
+
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "del": "^2.1.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-concat": ""
+  },
+
+  "author": "Anders Fjeldsø Christiansen",
+  "license": "ISC",
+
+  "paths": {
+    "html": {
+      "dev": "dev/*.html",
+      "dist": "dist"
+    },
+    "scripts": {
+      "dev": "dev/js/**/*.js",
+      "dist": "dist/js",
+      "bundles": {
+        "base": {
+          "name": "require.js",
+          "src": ["dev/js/require.js", "dev/js/require-config.js"],
+          "dest": "dist/js"
+        }
+      }
+    }
+  }
+}
